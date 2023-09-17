@@ -3,7 +3,6 @@ import axios from 'axios';
 import './Login.css';
 import { Link, withRouter } from 'react-router-dom';
 
-
 const Login = () => {
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
@@ -48,7 +47,7 @@ const Login = () => {
         <h1 class="invstr-button">Welcome to investr!</h1>
         <div className="loginForm">
             <div className="container">
-            <div className="subhead">Login</div>
+            <div className="subhead">Log-in</div>
                 <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <h5 className="enter-input">Email Address</h5>
@@ -69,9 +68,10 @@ const Login = () => {
                     onChange={handlePasswordChange}
                     />
                 </div>
-
-                <button type="submit">Submit</button>
                 <Link to="/register">Don't have an Account? Create one here.</Link>
+                
+                <button type="submit">Submit</button>
+ 
                 </form>
             </div>
         </div>
