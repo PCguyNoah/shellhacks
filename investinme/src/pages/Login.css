@@ -3,7 +3,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
   }
@@ -50,6 +49,7 @@ body {
     border: 2px solid green;
     border-radius: 0.8rem;
     cursor: pointer;
+    margin-bottom: 1rem ;
   }
   
   .container button:hover {
@@ -63,4 +63,4 @@ body {
     border-radius: 0.8rem;
     box-sizing: border-box;
   }
-   
+
