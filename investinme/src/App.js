@@ -18,9 +18,13 @@ function App() {
             <Navbar/>
             <HomePage/>
           </Route>
+          <Route path="/register">
+            <Registration/>
+          </Route>
           <Route path="/*">
             <NotFound/>
           </Route>
+
         </Switch>
       </div>
     </Router>
