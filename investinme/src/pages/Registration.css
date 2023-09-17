@@ -24,7 +24,7 @@ body {
         width: 472px;
         height: 100vh; /* Ensure it covers the full height of the viewport */
         flex-shrink: 0;
-        background: url('C:\Users\ohopk\OneDrive\Documents\CommunityProject\FrontEnd\shellhacks\investinme\public\Pictures\InvestInMe.avif') no-repeat center center;
+        background: url('C:\investinme\public\images\InvestInMe.avif') no-repeat center center;
         background-size: cover;
         background-blend-mode: darken;
         border-radius: 10px;

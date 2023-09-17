@@ -1,89 +1,137 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 import axios from 'axios';
-import './Registration.css';
 
+function Registration() {
 
-const Registration = () => {
-    const[email, setEmail] = useState('');
-    const[password, setPassword] = useState('');
+    // States for each input field
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [bio, setBio] = useState('');
 
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        
+
+        // Here, you can use the state values to send the data to your server.
+        // e.g., using axios
         const formData = {
+            firstName,
+            lastName,
             email,
             password,
+            phoneNumber,
+            bio
         };
 
-        try {
-            // Send a POST request to the backend
-            const response = await axios.post('/api/login', formData);
-        
-            if (response.status === 200) {
-              // Handle a successful response from the server
-              console.log('Response from server:', response.data);
-            } else {
-              // Handle the case where the server response is not successful
-              console.error('Request failed');
-            }
-          } catch (error) {
-            // Handle any errors that occur during the request
-            console.error('Error:', error);
-          }
-        
+        // axios.post('/your-endpoint', formData).then(response => ...).catch(error => ...);
     };
 
     return (
         <div className="body">
             <div className="greenBorder">
-            <button type="submit" className="submit-button">Submit</button>
-
+                <button type="submit" className="submit-button">Submit</button>
             </div>
             <div className="registrationContainer"> 
                 <h2>Register</h2>
-                <form action="/submit-path" method="post">
+                <form onSubmit={handleSubmit}>
+
+                    {/* First Name input */}
                     <div className="input-box">
                         <label htmlFor="firstname">First Name:</label>
-                        <input tabIndex="0" type="text" id="firstName" name="firstname" placeholder="Enter First Name" required />
+                        <input 
+                            tabIndex="0" 
+                            type="text" 
+                            id="firstName" 
+                            name="firstname" 
+                            placeholder="Enter First Name"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    {/* Last Name input */}
                     <div className="input-box">
                         <label htmlFor="lastname">Last Name:</label>
-                        <input tabIndex="0" type="text" id="lastName" name="lastname" placeholder="Enter Last Name"  required />
+                        <input 
+                            tabIndex="0" 
+                            type="text" 
+                            id="lastName" 
+                            name="lastname" 
+                            placeholder="Enter Last Name"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    {/* Email input */}
                     <div className="input-box">
                         <label htmlFor="email">Email:</label>
-                        <input tabIndex="0" type="text" id="email" name="email" placeholder="Eneter an Email" required />
+                        <input 
+                            tabIndex="0" 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter an Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    {/* Password input */}
                     <div className="input-box">
                         <label htmlFor="password">Password:</label>
-                        <input tabIndex="0" type="password" id="password" name="password" placeholder="Enter a place holder" required />
+                        <input 
+                            tabIndex="0" 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter a password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    {/* Phone Number input */}
                     <div className="input-box">
                         <label htmlFor="phonenumber">Phone Number:</label>
-                        <input tabIndex="0" type="text" id="phone" name="phonenumber"  placeholder="Enter a phone number" required />
+                        <input 
+                            tabIndex="0" 
+                            type="text" 
+                            id="phone" 
+                            name="phonenumber" 
+                            placeholder="Enter a phone number"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    {/* Bio input */}
                     <div className="input-box">
                         <label htmlFor="Bio">Bio:</label>
-                        <input tabIndex="0" type="Bio" id="Bio" name="Bio"  placeholder="Tell us about yourself"required/>
+                        <input 
+                            tabIndex="0" 
+                            type="text" 
+                            id="Bio" 
+                            name="Bio" 
+                            placeholder="Tell us about yourself"
+                            value={bio}
+                            onChange={(e) => setBio(e.target.value)}
+                            required 
+                        />
                     </div>
 
+                    <button type="submit">Register</button>
                 </form>
             </div>
         </div>
     );
-};
+}
 
 export default Registration;
