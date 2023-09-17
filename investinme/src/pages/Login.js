@@ -43,10 +43,10 @@ const Login = () => {
 
     return (
     <div className="main">
-        <div className="title">Invest In Me</div>
-        <div className="subhead">Login</div>
         <div className="loginForm">
             <div className="container">
+            <div className="subhead">Login</div>
+
                 <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <h5 className="enter-input">Email Address</h5>
