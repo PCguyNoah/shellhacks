@@ -7,7 +7,7 @@ function HomePage() {
 
     return (
     <div className="detail-page">
-      <button>Click me</button>
+      
     </div>
   );
 };
