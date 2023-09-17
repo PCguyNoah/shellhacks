@@ -1,0 +1,171 @@
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #edd9a3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins';
+
+}
+
+
+body {
+    position: relative; /* Ensure this is set so that the child can be positioned in relation to it */
+    background: #edd9a3;
+}
+
+.greenBorder {
+        position: relative;
+        width: 472px;
+        height: 100vh; /* Ensure it covers the full height of the viewport */
+        flex-shrink: 0;
+        background: url('C:\Users\ohopk\OneDrive\Documents\CommunityProject\FrontEnd\shellhacks\investinme\public\Pictures\InvestInMe.avif') no-repeat center center;
+        background-size: cover;
+        background-blend-mode: darken;
+        border-radius: 10px;
+        box-shadow: 0px 4px 140px 0px rgba(54, 72, 197, 0.25);
+        position: absolute;
+        left: 0;
+        top: 0; /* Ensure it's at the top of the body */
+    
+}
+
+.registrationContainer{
+    width: 918px;
+    height: 780px;
+
+    border-radius: 5px;
+    border: 1px solid #717171;
+    background: #edd9a3;
+    box-shadow: 0px 4px 35px 0px rgba(41, 82, 144, 0.25);
+    margin-left: 482px; /* Added 10px for spacing */
+    display: flex;
+    justify-items: center; 
+    flex-direction: column; /* Add this line */
+    align-items: center;
+
+
+}
+
+.registrationContainer h2{
+    color: #FFFF;
+    font-family: Open Sans;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    margin-left: 0;
+    text-align: center;
+
+
+    
+}
+
+
+.registrationContainer form{
+    max-width: 80%; /* or whatever width you prefer */
+    margin: 20px auto;
+}
+
+.input-container {
+    margin-bottom: 20px; /* Provide space between input blocks */
+  }
+  
+  label {
+    display: block;      /* Display the label as a block to ensure it's on its own line */
+    margin-bottom: 5px;  /* Provide a little space between the label and the input */
+  }
+  
+  input {
+    width: 250px;         /* Make the input take up the full width of its container */
+    padding: 10px;       /* Provide some padding inside the input */
+    font-size: 16px;     /* Set font size for the input text */
+    border: 1px solid #ccc;  /* Set a border for the input */
+    border-radius: 4px;      /* Slightly round the corners of the input */
+    background-color: transparent; /* Make the input background transparent */
+    color: white; /* Set input text color to white */
+    
+  }
+
+
+  .input-row {
+    display: flex;           /* Set up a Flexbox container */
+    justify-content: center; /* Distribute boxes evenly across the row */
+    gap: 10px;     /* Space between rows */
+}
+
+.input-box {
+    width: 100%;
+    position: relative; /* This ensures the absolute positioning of child elements will be relative to this container */
+    margin-bottom: 20px; /* Space between input fields for clarity */
+}
+
+.input-label {
+    position: absolute; /* Absolutely position the label */
+    top: 10px;          /* Adjust these values to move the label to the desired position */
+    left: 10px;
+    pointer-events: none; /* So the label won't interfere with clicking on the input */
+    transition: 0.3s ease; /* Smooth transition for any label movement or color change */
+}
+
+input:placeholder-shown + .input-label {
+    color: #aaa; /* Color of the label when placeholder is visible */
+    transform: translateY(25px); /* Move label down over the input */
+}
+
+input:not(:placeholder-shown) + .input-label,
+input:focus + .input-label {
+    color: #333; /* Color of the label when input is filled or focused */
+    transform: translateY(0px); /* Keep label at its original position */
+}
+
+
+.submit-button {
+    background-color: transparent;  /* Transparent background */
+    color: #000;                    /* White text color */
+    width: 200px;
+    height: 75px;
+    border-radius: 15px;
+    border: 2px solid #000;
+
+    position: absolute;
+    bottom: 50px;  /* Give it a little space from the absolute bottom */
+    left: 50px;    /* Place it a bit away from the left edge */
+    transform: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer;   
+    margin-top: 25px; 
+    display: block; /* Make the button a block-level element */
+    margin-left: 0;
+
+}
+.submit-button:hover {
+    background-color: #FFF;        /* White background on hover */
+    color: green;                   /* Black text color on hover */
+}
+
+.input-box {
+    position: relative; /* ... keep the rest */
+}
+
+/* ... your other styles ... */
+
+input + .input-label {
+    color: #aaa; /* Color of the label when placeholder is visible */
+    transform: translateY(25px); /* Move label down over the input */
+}
+
+input:focus + .input-label {
+    color: #333; /* Color of the label when input is filled or focused */
+    transform: translateY(0px); /* Keep label at its original position */
+}
+
+.input-box:last-of-type input {
+    width: 250x;   /* or width: 100%; for full width of its container */
+    height: 150px;
+}
+
