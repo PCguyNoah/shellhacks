@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
 import Navbar from './pages/Navbar';
+import Registration from '.pages/Registration'
 
 function App() {
   return (
