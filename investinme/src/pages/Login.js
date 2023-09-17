@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from 'axios';
 import './Login.css';
 
-
 const Login = () => {
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
@@ -22,7 +21,7 @@ const Login = () => {
             email,
             password,
         };
-
+        /*
         try {
             // Send a POST request to the backend
             const response = await axios.post('/api/login', formData);
@@ -38,9 +37,9 @@ const Login = () => {
             // Handle any errors that occur during the request
             console.error('Error:', error);
           }
-        
+        */
+      
     };
-
 
     return (
     <div className="main">

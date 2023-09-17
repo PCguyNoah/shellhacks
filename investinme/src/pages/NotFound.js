@@ -3,12 +3,13 @@ import axios from 'axios';
 import './BusinessDetail.css';
 
 
-const BusinessDetail = () => {
+function NotFound() {
+    
     return (
     <div className="detail-page">
-      Business page
+      404 NOT FOUND
     </div>
   );
 };
 
-export default BusinessDetail;
+export default NotFound;

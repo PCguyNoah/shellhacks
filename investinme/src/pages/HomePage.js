@@ -3,12 +3,13 @@ import axios from 'axios';
 import './BusinessDetail.css';
 
 
-const BusinessDetail = () => {
+function HomePage() {
+
     return (
     <div className="detail-page">
-      Business page
+      <button>Click me</button>
     </div>
   );
 };
 
-export default BusinessDetail;
+export default HomePage;
